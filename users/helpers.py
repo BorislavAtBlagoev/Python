@@ -17,10 +17,10 @@ class Auth0Helper:
 
     def _set_token(self):
         data = {
-            "client_id": os.environ.get('AUTH0_CLIENT_ID'),
-            "client_secret": os.environ.get('AUTH0_CLIENT_SECRET'),
-            "audience": os.environ.get('AUTH0_AUDIENCE'),
-            "grant_type": os.environ.get('AUTH0_GRAND_TYPE')
+            "client_id": 'yPumHwHTMQunpFK7nDNueOuO00TBVSie',
+            "client_secret": 'H5BbcB96ciz5Vn_PCyEOusRFoeDClBKK-mGcToxz62fZQ6eK45YaftMB3MI3uBZL',
+            "audience": 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/api/v2/',
+            "grant_type": 'client_credentials'
         }
 
         response = requests.post(AUTH0_URLS['issue_a_token'], data)

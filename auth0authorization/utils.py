@@ -14,7 +14,7 @@ def jwt_get_username_from_payload_handler(payload):
 
 def jwt_decode_token(token):
     header = jwt.get_unverified_header(token)
-    jwks = requests.get(os.environ.get('AUTH0_DOMAIN') + '.well-known/jwks.json').json()
+    jwks = requests.get('https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + '.well-known/jwks.json').json()
     public_key = None
     for jwk in jwks['keys']:
         if jwk['kid'] == header['kid']:
@@ -23,8 +23,8 @@ def jwt_decode_token(token):
     if public_key is None:
         raise Exception('Public key not found.')
 
-    issuer = os.environ.get('AUTH0_DOMAIN')
-    audience = os.environ.get('AUTH0_DOMAIN') + 'userinfo'
+    issuer = 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/'
+    audience = 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + 'userinfo'
     result = jwt.decode(token, public_key, audience=audience, issuer=issuer, algorithms=['RS256'])
     return result
 

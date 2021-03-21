@@ -23,10 +23,10 @@ AUTH0_PREDEFINED_ROLES = [
 ]
 
 AUTH0_URLS = {
-    'issue_a_token': os.environ.get('AUTH0_DOMAIN') + 'oauth/token',
-    'create_user': os.environ.get('AUTH0_DOMAIN') + 'api/v2/users',
-    'assign_role': os.environ.get('AUTH0_DOMAIN') + 'api/v2/roles/{userRoleId}/users',
-    'login_user': os.environ.get('AUTH0_DOMAIN') + 'authorize'
+    'issue_a_token': 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + 'oauth/token',
+    'create_user': 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + 'api/v2/users',
+    'assign_role': 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + 'api/v2/roles/{userRoleId}/users',
+    'login_user': 'https://mm-restaurant-devcamp-2021-1.eu.auth0.com/' + 'authorize'
 }
 
 CLAIMS = {

@@ -89,23 +89,12 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('ENGINE'),
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-    }
-}
-
-CACHES = {
-    "default": {
-        "BACKEND": os.getenv('BACKEND'),
-        "LOCATION": os.getenv('LOCATION'),
-        "OPTIONS": {
-            "CLIENT_CLASS": os.getenv('CLIENT_CLASS')
-        },
-        "KEY_PREFIX": os.getenv('KEY_PREFIX')
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'restaurant_api',
+        'USER': 'boro',
+        'PASSWORD': 'bAb980204aws@',
+        'HOST': '52.15.75.113',
+        'PORT': '3306',
     }
 }
 
