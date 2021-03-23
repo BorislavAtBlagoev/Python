@@ -1,7 +1,0 @@
-from users.constants import ADMIN_ROLE, BARTENDER_ROLE, WAITER_ROLE
-
-roles = (
-    (ADMIN_ROLE, ADMIN_ROLE),
-    (BARTENDER_ROLE, BARTENDER_ROLE),
-    (WAITER_ROLE, WAITER_ROLE),
-)
